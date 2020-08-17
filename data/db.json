@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "name": "pistol",
+      "display_name": "pistol",
+      "description": "a type of semi-auto hand gun",
+      "id": 1
+    },
+    {
+      "name": "revolver",
+      "display_name": "revolver",
+      "description": "a type of hand gun that have a revoving cylinder for ammo",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "category": "pistol",
+      "name": "glock_43",
+      "display_name": "glock 43",
+      "description": "a great little 9mm carry pistol",
+      "id": 1
+    },
+    {
+      "category": "revolver",
+      "name": "kimber_k6s",
+      "display_name": "Kimber k6s",
+      "description": "a great little .357 mag 6 round carry revolver",
+      "id": 2
+    }
+  ]
+}
