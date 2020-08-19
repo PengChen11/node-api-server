@@ -2,6 +2,8 @@
 
 [Click here to see phase 1 docs](phase_docs/phase_1.md)
 
+[Click here to see phase 2 docs](phase_docs/phase_2.md)
+
 An Express/Node.js based server designed to be a “model agnostic” REST API server, which can perform CRUD operations on any data model
 
 ## Business Requirements
@@ -75,7 +77,7 @@ GET ONE: <http://amazingapi.com/api/v1/products/12345>
 
 CREATE Records (CRUD: CREATE)
 
-POST: http://amazingapi.com/api/v1/products
+POST: ```http://amazingapi.com/api/v1/products```
 
 Create requires that you POST a JSON object to the route that corresponds to the correct model (products, in this case) and returns an object representing what you created:
 
@@ -109,7 +111,7 @@ Output
 
 UPDATE Records (CRUD: UPDATE)
 
-PUT or PATCH: http://amazingapi.com/api/v1/products/12345
+PUT or PATCH: ```http://amazingapi.com/api/v1/products/12345```
 
 Updating records with PUT or PATCH requires a JSON object be given to a route that specifies both the model name and the record ID that represents the record you wish to update. The object given to the route is to be either the FULL object in the case of a PUT, or just the fields you wish to modify, in the case of a PATCH. These operations must always return the object as it exists in the data source after your update operation.
 
@@ -167,7 +169,7 @@ Output:
 
 DELETE Records (CRUD: DELETE)
 
-DELETE: http://amazingapi.com/api/v1/products/12345
+DELETE: ```http://amazingapi.com/api/v1/products/12345```
 
 This operation should remove the record with the given ID (12345) from the model (products). The return should be the state of that record in the database following the operation. Convention dictates an empty object be returned rather than null.
 
@@ -182,21 +184,22 @@ The application will be created with the following overall architecture and meth
 1. Node.js
 2. ES6 Classes and best practices
 3. ExpressJS Web Server, built modularly
-  - Middleware for handling 404 and 500 conditions
-  - Middleware for handling the dynamic loading of the correct data model as specified in the route
-    - Inspect the route, looking for the model name
-    - require() the correct module model (i.e. if the model is categories, require('src/models/categories/categories-model.js'))
-  - Use a single router (v1.js) to handle the ReST methods for CRUD for any model
-    - express.params middleware
+     - Middleware for handling 404 and 500 conditions
+     - Middleware for handling the dynamic loading of the correct data model as specified in the route
+        - Inspect the route, looking for the model name
+        - require() the correct module model (i.e. if the model is categories, require('src/models/categories/categories-model.js'))
+     - Use a single router (v1.js) to handle the ReST methods for CRUD for any model
+     - express.params middleware
+
 4. Persistence using a Mongo Database (NoSQL)
 5. Mongoose Schemas (data models) to define and model data
 6. Mongoose Model “wrapper” class to serve as the API between the express server and the data models themselves
 7. Test Driven Development, using Jest
-  - Tests will be runnable locally
-  - Tests will auto-execute (CI) in your repo using GitHub actions
-  - Tests will use a 3rd party library called supergoose to:
-    - “mock” the mongo running database
-    - “mock” the running Express server
+     - Tests will be runnable locally
+     - Tests will auto-execute (CI) in your repo using GitHub actions
+     - Tests will use a 3rd party library called supergoose to:
+       - “mock” the mongo running database
+       - “mock” the running Express server
 8. Deployment to Heroku
 
 ### Data Models
@@ -256,20 +259,20 @@ Products
 
 2. Phase 2: Basic API
 
-  - Create CRUD/ReST endpoints for categories and products
-  - Separate route modules for each data model type
-  - Store user created data in memory (no persistence)
-  - Integrates with an online CI framework
+     - Create CRUD/ReST endpoints for categories and products
+     - Separate route modules for each data model type
+     - Store user created data in memory (no persistence)
+     - Integrates with an online CI framework
 
 3. Phase 3: Persistence
 
-  - Replace the in-memory data store with mongo
-  - Use Mongo Collections for each data model type
+     - Replace the in-memory data store with mongo
+     - Use Mongo Collections for each data model type
 
 4. Phase 4: Dynamic Models
 
-  - Create a single model class that all data models can inherit from to keep the interface simple
-  - Use middleware to load models based on param
-    - i.e. Replace app.get('/api/v1/categories') and app.get('/api/v1/products') with app.get('/api/v1/:model')
-  - API is Fully Documented
-  - API is deployed and running live
+     - Create a single model class that all data models can inherit from to keep the interface simple
+     - Use middleware to load models based on param
+       - i.e. Replace app.get('/api/v1/categories') and app.get('/api/v1/products') with app.get('/api/v1/:model')
+     - API is Fully Documented
+     - API is deployed and running live
