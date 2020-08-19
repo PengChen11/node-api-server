@@ -1,8 +1,10 @@
 'use strict';
 
 const { server } = require('../lib/server.js');
-const supertest = require('supertest');
-const mockRequest = supertest(server);
+// const supertest = require('supertest');
+// const mockRequest = supertest(server);
+const supergoose = require('@code-fellows/supergoose');
+const mockRequest = supergoose(server);
 
 describe('web server', () => {
 
@@ -36,7 +38,7 @@ describe('web server', () => {
 
   });
 
-  it('should respond properly on request to /api/v1/food', () => {
+  it('should respond properly on request to /api/v1/products', () => {
 
     return mockRequest
       .get('/api/v1/products')

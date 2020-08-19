@@ -4,6 +4,8 @@
 
 [Click here to see phase 2 docs](phase_docs/phase_2.md)
 
+[Click here to see phase 3 docs](phase_docs/phase_3.md)
+
 An Express/Node.js based server designed to be a “model agnostic” REST API server, which can perform CRUD operations on any data model
 
 ## Business Requirements

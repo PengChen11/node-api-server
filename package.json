@@ -8,6 +8,9 @@
     "test": "jest --coverage",
     "test-watch": "jest --watchAll --coverage"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/401-advanced-javascript-peng-chen/api-server.git"
@@ -23,9 +26,13 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.7.0",
     "express": "^4.17.1",
-    "jest": "^26.4.0",
     "method-override": "^3.0.0",
-    "mongoose": "^5.10.0",
+    "mongoose": "^5.10.0"
+  },
+  "devDependencies": {
+    "@code-fellows/supergoose": "^1.0.2",
+    "jest": "^26.4.0",
+    "mongos": "0.1.0",
     "supertest": "^4.0.2"
   }
 }
