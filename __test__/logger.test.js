@@ -1,4 +1,4 @@
-const loggerMiddleware = require('../middleware/logger');
+const loggerMiddleware = require('../lib/middleware/logger');
 
 // Tested middleware needs to either be exported from the server or a separate module
 describe('logger middleware', () => {
