@@ -39,7 +39,7 @@ describe('web server', () => {
   it('should respond properly on request to /api/v1/food', () => {
 
     return mockRequest
-      .get('/api/v1/food')
+      .get('/api/v1/products')
       .then(results => {
         expect(results.status).toBe(200);
       }).catch(console.error);
