@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose",
-    "test-watch": "jest --watchAll --verbose"
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --watchAll --verbose --coverage"
   },
   "jest": {
     "testEnvironment": "node"
@@ -14,18 +14,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "jest": "^24.8.0",
-    "mongodb-memory-server": "^5.1.5",
-    "mongoose": "^5.6.1",
-    "mongoose-schema-jsonschema": "^1.2.1",
-    "morgan": "^1.9.1",
-    "supertest": "^4.0.2",
-    "uuid": "^3.3.2"
+    "mongoose": "^5.6.1"
   },
   "devDependencies": {
-    "@code-fellows/supergoose": "^1.0.11"
+    "@code-fellows/supergoose": "^1.0.11",
+    "jest": "^26.4.1",
+    "supertest": "^4.0.2"
   }
 }
