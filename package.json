@@ -1,38 +1,31 @@
 {
-  "name": "api-server",
+  "name": "api-server-solution",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint **/*.js",
-    "test": "jest --coverage",
-    "test-watch": "jest --watchAll --coverage"
+    "test": "jest --verbose",
+    "test-watch": "jest --watchAll --verbose"
   },
   "jest": {
     "testEnvironment": "node"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/401-advanced-javascript-peng-chen/api-server.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/401-advanced-javascript-peng-chen/api-server/issues"
-  },
-  "homepage": "https://github.com/401-advanced-javascript-peng-chen/api-server#readme",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "eslint": "^7.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "method-override": "^3.0.0",
-    "mongoose": "^5.10.0"
+    "jest": "^24.8.0",
+    "mongodb-memory-server": "^5.1.5",
+    "mongoose": "^5.6.1",
+    "mongoose-schema-jsonschema": "^1.2.1",
+    "morgan": "^1.9.1",
+    "supertest": "^4.0.2",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@code-fellows/supergoose": "^1.0.2",
-    "jest": "^26.4.0",
-    "mongos": "0.1.0",
-    "supertest": "^4.0.2"
+    "@code-fellows/supergoose": "^1.0.11"
   }
 }
