@@ -1,5 +1,7 @@
 # LAB: Express
 
+[Click here to get back to the repo](https://github.com/PengChen11/node-api-server/tree/auth-01)
+
 Dynamic API Phase 2: Continue working on a multi-day build of a dynamic API
 
 In this lab, we’ll be using a moving away from ```json-server``` and creating a “real” API server of our own, using Express. Our express server will be coded for modularity and performance. You will replicate the input/output of ```json-server``` but storing data in memory to simulate full CRUD functionality, but without persistence.

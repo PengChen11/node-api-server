@@ -1,5 +1,7 @@
 # LAB: HTTP and REST
 
+[Click here to get back to the repo](https://github.com/PengChen11/node-api-server/tree/auth-01)
+
 [Click here to see the json response file](../docs/lab_06_api.json)
 
 ## Dynamic API: Phase 1

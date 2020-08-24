@@ -1,5 +1,7 @@
 # LAB - Express Routing & Connected API
 
+[Click here to get back to the repo](https://github.com/PengChen11/node-api-server/tree/auth-01)
+
 Dynamic API Phase 3: Continue working on a multi-day build of a dynamic API
 
 In this 3rd phase of development, we’ll be modularizing our server, making it easier to manage as well as adding a much needed persistence layer, saving all API data to a Mongo database.

@@ -1,5 +1,7 @@
 # LAB: API Server
 
+[Click here to get back to the repo](https://github.com/PengChen11/node-api-server/tree/auth-01)
+
 Dynamic API Phase 4: Completing work on the API server
 
 In this final phase, we’ll be making our API easier to manage, and much more extensible, allowing for it to automatically recognize new data models, backed by any database type. We’ll also be preparing it for delivery with a full suite of documentation, tests, and a permanent deployment

@@ -1,5 +1,7 @@
 # Dynamic API Server
 
+[Click here to get back to the repo](https://github.com/PengChen11/node-api-server/tree/auth-01)
+
 An Express/Node.js based server designed to be a “model agnostic” REST API server, which can perform CRUD operations on any data model.
 
 The whole process will split into 4 phases:
