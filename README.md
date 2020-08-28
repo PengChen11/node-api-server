@@ -1,5 +1,8 @@
 # Code Fellows Javascript 401 lab -- build an API Server
 
+Update on Aug 28th 2020:
+TypeScript is being implemented.
+
 ## Stage 1
 
 We’re opening a online store! In order to support our web application, we need to create an API that will serve specific data (namely, categories and products) to our application. We will write an API to interface with our databases to provide category and product information to our front end app.
